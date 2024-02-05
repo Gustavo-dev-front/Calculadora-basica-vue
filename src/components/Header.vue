@@ -1,9 +1,10 @@
 <script setup>
+const {estado}  = defineProps(["estado"]);
 </script>
 
 <template>
-  <header>
+  <header class="Header">
     <h1>Minha calculadora</h1>
-    <span>Você fez um total de <strong>5</strong> cálculos até o momento</span>
+    <span>O resultado desta <strong>{{ estado.operadores[estado.operadorAtual] }}</strong> é <strong>{{estado.resultado}}</strong></span>
   </header>
 </template>
